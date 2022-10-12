@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Car</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="js/Base.js"></script>
+    <script src="js/Car.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- PLANE BASE -->
+      <a-entity id="base" base></a-entity>
+
+      <!-- CAR MODEL -->
+      <a-entity animation="property: rotation;to: 0 360 0;easing:linear;loop: true;dur: 15000">
+        <a-entity id="car" car></a-entity>
+      </a-entity>
+
+      <!-- CAMERA -->
+      <a-entity
+        camera
+        position="0 50 250"
+      ></a-entity>
+    </a-scene>
+  </body>
+</html>
